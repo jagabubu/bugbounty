@@ -1,0 +1,4 @@
+https://shop.tastyrewards.com/flavors?flavor=thisismytest123
+https://shop.tastyrewards.com/home?lang=thisismytest123
+
+403 forbiden error, server ack but you dont have permission yet

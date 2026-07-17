@@ -1,0 +1,16 @@
+waybackurls tastyrewards.com | head -20
+waybackurls tastyrewards.com | tee wayback.txt
+
+cat wayback.txt | grep -E "\?.*="
+
+
+subfinder -d tastyrewards.com -o subs.txt
+cat subs.txt
+
+
+assetfinder --subs-only tastyrewards.com >> subs.txt
+sort -u subs.txt -o subs.txt
+
+
+cat subs.txt | httpx-toolkit -status-code -title -o alive.txt
+cat alive.txt
